@@ -1,0 +1,24 @@
+
+div {
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  margin: 20px 10px;
+  width: 150px;   
+  height: 35px;
+  font-size: 15px;
+  background-color: #d0cfcb00;
+  color: white;
+  font-weight: 2;
+  border-radius: 5px;
+  border: 2px solid #e0e621;
+}
+
+button:hover {
+  background-color: #e0e621;
+  color: #004d43;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}

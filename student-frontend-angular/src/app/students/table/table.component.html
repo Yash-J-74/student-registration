@@ -1,0 +1,29 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let student of students ">
+            <td>{{ student.id }}</td>
+            <td>{{ student.firstName | titlecase }}</td>
+            <td>{{ student.lastName | titlecase }}</td>
+            <td>{{ student.dob | date}} </td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.email }} </td>
+            <td>{{ student.studentGender | titlecase}} </td>
+            <td>{{ student.phoneNumber}} </td>
+            <td>
+                <button id="update" (click)="updateStudent(student.id)">Update</button>
+                <button id="delete" (click)="deleteStudent(student.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

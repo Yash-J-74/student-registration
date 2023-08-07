@@ -1,0 +1,35 @@
+<div class="form-container">
+    <form #register="ngForm" (ngSubmit)="studentRegister(register.value)" class="addStudentForm">
+        <h3>Register Student</h3>
+        <div class="container">
+            <p>First Name:</p>
+            <input ngModel type="text" name="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="container">
+            <p>Last Name:</p>
+            <input ngModel type="text" name="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="container">
+            <p>Date of Birth: </p>
+            <input ngModel type="date" name="dob" placeholder="Date Of Birth" required>
+        </div>
+        <div class="container">
+            <p>Email:</p>
+            <input ngModel type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="container gender">
+            <label for="gender">Gender: </label>
+            <p>Male</p>
+            <input ngModel type="radio" name="studentGender" value="male">
+            <p>Female</p>
+            <input ngModel type="radio" name="studentGender" value="female">
+        </div>
+        <div class="container">
+            <p>Phone Number:</p>
+            <input ngModel type="tel" name="phoneNumber" placeholder="Phone Number" required>
+        </div>
+        <div class="container btn">
+            <button type="submit" [disabled]="register.form.invalid" class="submitForm">Submit</button>
+        </div>
+    </form>
+</div>

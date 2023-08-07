@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1 class="header" id="dash">Student List</h1>
+    <div class="table container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th> 
+                    <th>Phone Number</th>
+                    <th>Delete/Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Added through JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="viewStudent">
+        <a href="./register.html">
+          <button type="button" class="viewStudentBtn">Add New Student</button>
+        </a>
+        <a href="./index.html">
+            <button id="logoutBtn" type="button" class="viewStudentBtn">Log Out</button>
+        </a>
+    </div>
+</body>
+<script src="students.js"></script>
+</html>

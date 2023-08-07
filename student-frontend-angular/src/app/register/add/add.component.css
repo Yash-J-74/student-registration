@@ -1,0 +1,72 @@
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-container h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.addStudentForm {
+    width: 350px;
+    background-color: white;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container input {
+    width: 160px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.container #dob {
+    width: 164px;
+}
+
+.gender {
+    width: 100px;
+    height: 53px;
+}
+.gender label {
+    margin-right: 125px;
+}
+.gender p {
+    margin: 0 10px;
+}
+
+.btn {
+    text-align: center;
+}
+.btn .submitForm {
+    display: inline-block;
+    margin: 20px auto;
+    width: 115px;   
+    height: 30px;
+    font-size: 15px;
+    background-color: white;
+    color: #004d43;
+    font-weight: 2;
+    border-radius: 5px;
+    border: 2px solid #004d43;
+}
+.btn .submitForm:hover {
+    background-color: #e0e621;
+    border: 2px solid #e0e621;
+    color: #004d43;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}

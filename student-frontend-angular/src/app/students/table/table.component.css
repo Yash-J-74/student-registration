@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table {
+    margin: 30px;
+    width: 100%;
+    height: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+button {
+    width: 115px;   
+    height: 30px;
+    font-size: 15px;
+    background-color: white;
+    font-weight: 2;
+    color: #004d43;
+    border-radius: 5px;
+    border: 2px solid #004d43;
+}
+
+#update:hover {
+    background-color: rgb(45, 100, 212);
+    border: 2px solid rgb(45, 100, 212);
+    color:white;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+#delete:hover {
+    background-color: rgb(225, 73, 73);
+    border: 2px solid rgb(225, 73, 73);
+    color:white;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}

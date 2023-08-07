@@ -1,0 +1,35 @@
+<div class="form-container">
+    <form #update="ngForm" (ngSubmit)="studentUpdate(update.value)" class="addStudentForm">
+        <h3>Update Student</h3>
+        <div class="container">
+            <p>First Name:</p>
+            <input [(ngModel)]="student.firstName" type="text" name="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="container">
+            <p>Last Name:</p>
+            <input [(ngModel)]="student.lastName" type="text" name="lastName" placeholder="Enter your last name" required>
+        </div>
+        <div class="container">
+            <p>Date of Birth: </p>
+            <input [(ngModel)]="student.dob" type="date" name="dob" placeholder="Date Of Birth" required>
+        </div>
+        <div class="container">
+            <p>Email:</p>
+            <input [(ngModel)]="student.email" type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="container gender">
+            <label for="gender">Gender: </label>
+            <p>Male</p>
+            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="male">
+            <p>Female</p>
+            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="female">
+        </div>
+        <div class="container">
+            <p>Phone Number:</p>
+            <input [(ngModel)]="student.phoneNumber" type="tel" name="phoneNumber" placeholder="Phone Number" required>
+        </div>
+        <div class="container btn">
+            <button type="submit" [disabled]="update.form.invalid" class="submitForm">Submit</button>
+        </div>
+    </form>
+</div>

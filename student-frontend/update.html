@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Student</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h1 class="header">Student Dashboard</h1>
+
+  <div class="form-container">
+    <form class="addStudentForm" id="addStudentForm">
+      <h3>Update Student</h3>
+      <div class="container">
+        <p>First Name:</p>
+        <input type="text" name="firstName" id="first_name" placeholder="Enter your first name" required>
+      </div>
+      <div class="container">
+        <p>Last Name:</p>
+        <input type="text" name="lastName" id="last_name" placeholder="Enter your last name" required>
+      </div>
+      <div class="container">
+        <p>Date of Birth: </p>
+        <input type="date" name="dob" id="dob" placeholder="Date Of Birth" required>
+      </div>
+      <div class="container">
+        <p>Email:</p>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="container gender">
+        <label for="gender" >Gender: </label>
+        <p>Male</p>
+        <input type="radio" name="studentGender" id="male" value="male">
+        <p>Female</p>
+        <input type="radio" name="studentGender" id="female" value="female">
+      </div>
+      <div class="container">
+        <p>Phone Number:</p>
+        <input type="tel" name="phoneNumber" id="phone_number" placeholder="Phone Number" required>
+      </div>
+      <div class="container btn">
+        <button type="submit" class="submitForm">Update</button>
+      </div>
+    </form>
+  </div>
+  <div class="viewStudent">
+    <a href="./students.html">
+      <button type="button" class="viewStudentBtn">Back</button>
+    </a>
+  </div>
+  <script src="update.js"></script>
+  <script src="validation.js"></script>
+</body>
+  
+</html>

@@ -1,0 +1,17 @@
+<div>
+    <form #login="ngForm" (ngSubmit)="userLogin(login.value)">
+      <h3>ADMIN LOGIN</h3>
+      <div class="container">
+        <p>User Name:</p>
+        <input ngModel type="text" name="email" placeholder="Enter the Username" required>
+      </div>
+      <div class="container">
+        <p>Password:</p>
+        <input ngModel type="password" name="password" placeholder="Enter the Password" required>
+      </div>
+      
+      <div class="container btn">
+        <button type="submit" class="submitForm">Log In</button>
+    </div>
+    </form>
+</div>
