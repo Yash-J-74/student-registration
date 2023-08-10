@@ -1,35 +1,35 @@
 <div class="form-container">
-    <form #update="ngForm" (ngSubmit)="studentUpdate(update.value)" class="addStudentForm">
+    <form #update="ngForm" [formGroup]="updateForm" (ngSubmit)="studentUpdate(update.value)" class="addStudentForm">
         <h3>Update Student</h3>
         <div class="container">
             <p>First Name:</p>
-            <input [(ngModel)]="student.firstName" type="text" name="firstName" placeholder="Enter your first name" required>
+            <input [ngClass]="{ 'invalid-input': firstName && firstName.invalid && firstName.touched }" [(ngModel)]="student.firstName" type="text" name="firstName" placeholder="Enter your first name" formControlName="firstName">
         </div>
         <div class="container">
             <p>Last Name:</p>
-            <input [(ngModel)]="student.lastName" type="text" name="lastName" placeholder="Enter your last name" required>
+            <input [ngClass]="{ 'invalid-input': lastName && lastName.invalid && lastName.touched }" [(ngModel)]="student.lastName" type="text" name="lastName" placeholder="Enter your last name" formControlName="lastName">
         </div>
         <div class="container">
             <p>Date of Birth: </p>
-            <input [(ngModel)]="student.dob" type="date" name="dob" placeholder="Date Of Birth" required>
+            <input [ngClass]="{ 'invalid-input': dob && dob.invalid && dob.touched }" [(ngModel)]="student.dob" type="date" name="dob" placeholder="Date Of Birth" formControlName="dob">
         </div>
         <div class="container">
             <p>Email:</p>
-            <input [(ngModel)]="student.email" type="email" name="email" placeholder="Enter your email" required>
+            <input [ngClass]="{ 'invalid-input': email && email.invalid && email.touched }" [(ngModel)]="student.email" type="email" name="email" placeholder="Enter your email" formControlName="email">
         </div>
         <div class="container gender">
             <label for="gender">Gender: </label>
             <p>Male</p>
-            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="male">
+            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="male" formControlName="studentGender">
             <p>Female</p>
-            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="female">
+            <input [(ngModel)]="student.studentGender" type="radio" name="studentGender" value="female" formControlName="studentGender">
         </div>
         <div class="container">
             <p>Phone Number:</p>
-            <input [(ngModel)]="student.phoneNumber" type="tel" name="phoneNumber" placeholder="Phone Number" required>
+            <input [ngClass]="{ 'invalid-input': phoneNumber && phoneNumber.invalid && phoneNumber.touched }" [(ngModel)]="student.phoneNumber" type="tel" name="phoneNumber" placeholder="Phone Number" formControlName="phoneNumber">
         </div>
         <div class="container btn">
-            <button type="submit" [disabled]="update.form.invalid" class="submitForm">Submit</button>
+            <button type="submit" [disabled]="updateForm.invalid" class="submitForm">Submit</button>
         </div>
     </form>
 </div>

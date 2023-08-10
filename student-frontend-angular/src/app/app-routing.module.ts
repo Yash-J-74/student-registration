@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { AuthGuardGuard } from './service/auth-guard.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'update/:id', component: UpdateComponent, canActivate: [AuthGuardGuard]},
   { path: 'students', component: StudentsComponent, canActivate: [AuthGuardGuard]},
   { path: 'register', component: RegisterComponent, canActivate: [AuthGuardGuard]},
-  {path: '**', component: LoginComponent}
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
