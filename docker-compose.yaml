@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  db-postgres:
+    image: "postgres:14"
+    container_name: db-postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ganesh
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Ganesh@2003
+    
+  student-api:
+    build: ./student-backend
+    container_name: student-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db-postgres:5432/ganesh
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Ganesh@2003
+    ports:
+      - 8080:8080
+    depends_on:
+      - db-postgres
+
+  student-ui:
+    build: ./student-frontend-angular
+    container_name: student-ui
+    ports:
+      - 4200:80
+    links:
+      - student-api
+
+volumes:
+  db-data:
